@@ -1,0 +1,11 @@
+This is a simple bot intended to be a flexible skeleton for "real" bots.
+
+Run it with "racket bot.rkt", and it will barf at the lack of
+configuration file and will tell you where to create it and what to put
+in.
+
+For more convenient running, use "run" to run the above in a loop, or
+use "gabot.service" with systemd to have it running as a service.  The
+main directory for extensions is "handlers", see some samples there.
+There no proper documentation or a more useful README file, but it would
+be nice to have them.

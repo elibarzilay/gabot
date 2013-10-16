@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# A convenience script to run the bot, and restart it if it fails
+
+cd "$(dirname "$0")"
+while true; do
+  echo "*** Starting bot ***"
+  racket bot.rkt
+  echo "*** bot died, restarting in a minute ***"
+  sleep 60
+done

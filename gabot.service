@@ -1,0 +1,19 @@
+# Sample file to be used with systemd to run the bot as a service.
+# To use it, adjust the path to the bot's directory and to a racket
+# executable, and use your own username and group.
+
+[Unit]
+Description=Eli's IRC bot (gabot)
+
+[Service]
+User=eli
+Group=eli
+ExecStart=/bin/sh -c 'cd $HOME/work/gabot; $HOME/bin/racket bot.rkt >> /tmp/gabot-log 2>&1'
+StandardInput=null
+StandardOutput=null
+StandardError=null
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
